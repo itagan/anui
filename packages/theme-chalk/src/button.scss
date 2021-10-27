@@ -1,0 +1,22 @@
+@import "./mixins/mixins.scss";
+.an-ui-button-wrapper {
+  @include flexbox(center);
+  flex-shrink: 0;
+  padding: 0 2px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.an-ui-button-normal {
+  min-width: 80px;
+  height: 30px;
+  @include Border(1px, rgb(21, 113, 216));
+  color: rgb(21, 113, 216);
+  background-color: transparent;
+}
+.an-ui-button-large {
+  width: 335px;
+  height: 45px;
+  @include Border(1px, rgb(21, 113, 216));
+  color: #fff;
+  background-color: rgb(21, 113, 216);
+}

@@ -1,0 +1,29 @@
+// 禁止折行
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//flex box
+@mixin flexbox($jc:flex-start, $ai:center, $fd:row, $fw:nowrap) {
+  display: flex;
+  display: -webkit-flex;
+  // flex: 1;
+  justify-content: $jc;
+  -webkit-justify-content: $jc;
+  align-items: $ai;
+  -webkit-align-items: $ai;
+  flex-direction: $fd;
+  -webkit-flex-direction: $fd;
+  flex-wrap: $fw;
+  -webkit-flex-wrap: $fw;
+}
+
+// 定位方式水平垂直居中；
+@mixin positionCenter($left:-50%,$top:-50%) {
+	position: absolute;
+	left: -$left;
+	top: -$top;
+	transform: translate($left, $top);
+}
