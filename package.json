@@ -1,0 +1,23 @@
+{
+  "name": "anui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "wujingrun <wujingrun@andaijia.cn>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "postcss-loader": "6.1.1",
+    "vite": "^2.6.4"
+  },
+  "dependencies": {
+    "vue": "^3.2.16",
+    "vuepress-vite": "2.0.0-beta.26"
+  }
+}
