@@ -2,26 +2,71 @@
 
 常用的操作按钮。
 
-## 基础用法
+## 代码演示
 
-基础的按钮用法。
+按钮用法
 
 :::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
 
 ```vue
 <template>
   <div class="demo-wrap">
+    <h4>按钮类型</h4>
+    <div>
+      按钮支持 default、primary、info、warning、danger,waiting 六种类型，默认为
+      default。
+    </div>
     <an-button>默认按钮</an-button>
-    <an-button type="success" size="large">成功按钮</an-button>
-    <an-button type="info">信息按钮</an-button>
+    <an-button type="primary">环保按钮</an-button>
+    <an-button type="info">小蓝按钮</an-button>
+    <an-button type="waiting">等待更新的按钮</an-button>
+    <an-button type="danger">危险按钮</an-button>
+    <an-button type="warning">警告按钮</an-button>
+  </div>
+  <div class="demo-wrap">
+    <h4>朴素按钮</h4>
+    <div>
+      通过 plain
+      属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色。
+    </div>
+    <an-button plain type="primary">环保按钮</an-button>
+    <an-button plain type="info">小蓝按钮</an-button>
+    <an-button type="waiting">等待更新的按钮</an-button>
+  </div>
+  <div class="demo-wrap">
+    <h4>按钮尺寸</h4>
+    <div>
+      通过 size 属性将按钮设置为对应大小，large是100%；normal，small可靠内容撑开
+    </div>
+    <an-button plain type="primary" size="large">大号按钮</an-button>
+    <an-button plain type="info" size="normal">普通按钮</an-button>
+    <an-button type="waiting" size="small">小型按钮</an-button>
+    <an-button type="primary" size="mini">迷你按钮</an-button>
+  </div>
+  <div class="demo-wrap">
+    <h4>块级按钮</h4>
+    <div>通过 block 属性将按钮设置为块级元素，宽度100%，作为一栏显示</div>
+    <an-button block size="normal">普通按钮</an-button>
+    <an-button plain block type="info">小蓝按钮</an-button>
+  </div>
+  <div class="demo-wrap">
+    <h4>按钮形状</h4>
+    <div>通过 square 设置方形按钮，通过 round 设置圆形按钮。</div>
+    <an-button square type="primary">方形按钮</an-button>
+    <an-button round type="info">圆形按钮</an-button>
+  </div>
+  <div class="demo-wrap">
+    <h4>按钮禁用状态</h4>
+    <div>通过 disabled 属性来禁用按钮，禁用状态下按钮不可点击。</div>
+    <an-button disabled type="primary">禁用状态</an-button>
+    <an-button disabled type="info">禁用状态</an-button>
   </div>
 </template>
 <style lang="scss">
 .demo-wrap {
-  display: flex;
-  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-.an-ui-button-wrapper {
+.an-button {
   margin: 10px;
 }
 </style>
@@ -29,44 +74,30 @@
 
 :::
 
-## 不同尺寸
+## API
 
-提供三种不同尺寸的按钮。
+### Props
 
-:::demo
+| 参数     | 说明           | 类型    | 可选值                                      | 默认值  |
+| -------- | -------------- | ------- | ------------------------------------------- | ------- |
+| type     | 类型           | string  | primary / success / warning / info / danger | default |
+| size     | 尺寸           | string  | large / small / mini                        | normal  |
+| block    | 是否为块级元素 | boolean | ——                                          | false   |
+| plain    | 是否为朴素按钮 | boolean | ——                                          | false   |
+| square   | 是否为方形按钮 | boolean | ——                                          | false   |
+| round    | 是否为圆形按钮 | boolean | ——                                          | false   |
+| disabled | 是否禁用按钮   | boolean | ——                                          | false   |
+| round    | 是否为圆形按钮 | boolean | ——                                          | false   |
+| loading  | 加载中         | boolean | ——                                          | false   |
 
-```vue
-<an-button>默认按钮</an-button>
-<an-button type="primary">主要按钮</an-button>
-<an-button type="success">成功按钮</an-button>
-<an-button type="info">信息按钮</an-button>
-<an-button type="warning">警告按钮</an-button>
-<an-button type="danger">危险按钮</an-button>
-```
+### Event
 
-:::
+| 事件名 | 说明                                     | 回调参数     |
+| ------ | ---------------------------------------- | ------------ |
+| click  | 点击按钮，且按钮状态不为加载或禁用时触发 | event: Event |
 
-## 加载中
+### Slots
 
-点击按钮进行数据加载操作，在按钮上面显示加载状态。
-
-:::demo
-
-```vue
-<an-button>默认按钮</an-button>
-<an-button type="primary">主要按钮</an-button>
-<an-button type="success">成功按钮</an-button>
-<an-button type="info">信息按钮</an-button>
-<an-button type="warning">警告按钮</an-button>
-<an-button type="danger">危险按钮</an-button>
-```
-
-:::
-
-## Attributes
-
-| 参数    | 说明   | 类型    | 可选值                                             | 默认值  |
-| ------- | ------ | ------- | -------------------------------------------------- | ------- |
-| size    | 尺寸   | string  | large / small / mini                               | default |
-| type    | 类型   | string  | primary / success / warning / info / danger / text | primary |
-| loading | 加载中 | boolean | —                                                  | false   |
+| 名称    | 说明     |
+| ------- | -------- |
+| default | 按钮内容 |

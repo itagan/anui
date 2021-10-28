@@ -8,9 +8,14 @@ function getComponentsSidebar() {
   return [
     {
       isGroup: true,
-      text: '组件',
-      children: [{ text: 'button', link: '/components/button' }],
+      text: '基础组件',
+      children: [{ text: 'Button按钮', link: '/components/button' }],
     },
+    // {
+    //   isGroup: true,
+    //   text: '组件',
+    //   children: [{ text: 'Button按钮', link: '/components/button' }],
+    // },
   ]
 }
 

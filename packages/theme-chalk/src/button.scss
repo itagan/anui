@@ -1,22 +1,116 @@
 @import "./mixins/mixins.scss";
-.an-ui-button-wrapper {
-  @include flexbox(center);
-  flex-shrink: 0;
-  padding: 0 2px;
-  border-radius: 4px;
+.an-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-appearance: none;
+}
+.an-button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: inherit;
+  border-color: #000;
+  border-radius: inherit;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  content: ' ';
+}
+// 色彩
+.an-button--default {
+  color: #323233;
+  border: 1px solid #ebedf0;
+  background-color: #fff;
+}
+
+.an-button--primary {
+  color: #fff;
+  border: 1px solid #07c160;
+  background-color: #07c160;
+}
+.an-button--info {
+  color: #fff;
+  border: 1px solid rgb(21, 113, 216);
+  background-color: rgb(21, 113, 216);
+}
+.an-button--waiting {
+  color: #fff;
+  border: 1px solid #dedede;
+  background-color: #dedede;
+}
+.an-button--danger {
+  color: #fff;
+  background-color: #ee0a24;
+  border: 1px solid #ee0a24;
+}
+.an-button--warning {
+  color: #fff;
+  background-color: #ff976a;
+  border: 1px solid #ff976a;
+}
+// 朴素按钮
+.an-button--plain {
+  background-color: #fff;
+  &.an-button--primary {
+    color: #07c160;
+  }
+  &.an-button--info {
+    color: rgb(21, 113, 216);
+  }
+  &.an-button--waiting {
+    color: #dedede;
+  }
+  &.an-button--danger {
+    color: #ee0a24;
+  }
+}
+// 大小
+.an-button--normal {
+  padding: 0 15px;
   font-size: 14px;
 }
-.an-ui-button-normal {
-  min-width: 80px;
-  height: 30px;
-  border: 1px solid rgb(21, 113, 216);
-  color: rgb(21, 113, 216);
-  background-color: transparent;
+.an-button--large {
+  width: 100%;
+  height: 50px;
 }
-.an-ui-button-large {
-  width: 335px;
-  height: 45px;
-  border: 1px solid rgb(21, 113, 216);
-  color: #fff;
-  background-color: rgb(21, 113, 216);
+.an-button--small {
+  height: 32px;
+  padding: 0 8px;
+  font-size: 12px;
+}
+.an-button--mini {
+  height: 24px;
+  padding: 0 4px;
+  font-size: 10px;
+}
+// 块级按钮
+.an-button--block {
+  display: block;
+  width: 100%;
+}
+// 方形圆形
+.an-button--square {
+  border-radius: 0;
+}
+.an-button--round {
+  border-radius: 999px;
+}
+// 禁用按钮
+.an-button--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
