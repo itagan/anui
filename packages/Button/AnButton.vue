@@ -3,6 +3,7 @@
     @click.stop="btnClick"
     @tap.stop="btnClick"
     :class="['an-button', otherClasss]"
+    :style="customStyle"
     :disabled="disabled"
   >
     <slot></slot>
@@ -56,6 +57,7 @@ export default {
   },
   emits: ['click'],
   setup(props, ctx) {
+    // 样式名设置
     const otherClasss = computed(() => {
       return {
         [`an-button--${props.type}`]: props.type,
@@ -68,14 +70,28 @@ export default {
         [`an-button--loading`]: props.loading,
       }
     })
+    // 禁用属性
     let disabled = ref(false)
     disabled.value = !!props.disabled
+    // 自定义颜色
+    const customStyle = computed(() => {
+      if (!!props.color === false) return
+      if (!!props.plain) {
+        return `color:${props.color};border-color:${props.color};`
+      }
+      if (props.color && props.color.includes('linear-gradient')) {
+        return `color:#FFF;background:${props.color};border:0px;`
+      }
+      return `color:#FFF;background:${props.color};border-color:${props.color};`
+    })
+
     const btnClick = () => {
       ctx.emit('click')
     }
     return {
       disabled,
       otherClasss,
+      customStyle,
       btnClick,
     }
   },

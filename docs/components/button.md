@@ -13,7 +13,7 @@
   <div class="demo-wrap">
     <h4>按钮类型</h4>
     <div>
-      按钮支持 default、primary、info、warning、danger,waiting 六种类型，默认为
+      按钮支持 default、primary、info、warning、danger、waiting 六种类型，默认为
       default。
     </div>
     <an-button>默认按钮</an-button>
@@ -36,7 +36,8 @@
   <div class="demo-wrap">
     <h4>按钮尺寸</h4>
     <div>
-      通过 size 属性将按钮设置为对应大小，large是100%；normal，small可靠内容撑开
+      通过 size
+      属性将按钮设置为对应大小，large是100%；normal，small，mini可靠内容撑开。
     </div>
     <an-button plain type="primary" size="large">大号按钮</an-button>
     <an-button plain type="info" size="normal">普通按钮</an-button>
@@ -45,7 +46,7 @@
   </div>
   <div class="demo-wrap">
     <h4>块级按钮</h4>
-    <div>通过 block 属性将按钮设置为块级元素，宽度100%，作为一栏显示</div>
+    <div>通过 block 属性将按钮设置为块级元素，宽度100%，作为一栏显示。</div>
     <an-button block size="normal">普通按钮</an-button>
     <an-button plain block type="info">小蓝按钮</an-button>
   </div>
@@ -60,6 +61,15 @@
     <div>通过 disabled 属性来禁用按钮，禁用状态下按钮不可点击。</div>
     <an-button disabled type="primary">禁用状态</an-button>
     <an-button disabled type="info">禁用状态</an-button>
+  </div>
+  <div class="demo-wrap">
+    <h4>自定义颜色</h4>
+    <div>通过 color 属性可以自定义按钮的颜色。</div>
+    <an-button color="#7232dd">单色按钮</an-button>
+    <an-button color="#7232dd" plain>单色按钮</an-button>
+    <an-button color="linear-gradient(to right, #ff6034, #ee0a24)">
+      渐变色按钮
+    </an-button>
   </div>
 </template>
 <style lang="scss">
