@@ -1,0 +1,65 @@
+.an-cell {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  overflow: hidden;
+  color: #323233;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #fff;
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    border-bottom: 1px solid #ebedf0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+  &--noborder::after {
+    border-bottom: none;
+  }
+  &--center {
+    align-items: center;
+  }
+  &__title,
+  &__value {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+  }
+  &__value {
+    position: relative;
+    overflow: hidden;
+    color: #969799;
+    text-align: right;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+  &__value--alone {
+    color: #323233;
+    text-align: left;
+  }
+  &__label {
+    margin-top: 4px;
+    color: #969799;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.an-arrow {
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  transform: rotate(45deg);
+  margin: auto auto auto 10px;
+}

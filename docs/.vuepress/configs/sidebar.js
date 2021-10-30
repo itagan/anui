@@ -9,7 +9,10 @@ function getComponentsSidebar() {
     {
       isGroup: true,
       text: '基础组件',
-      children: [{ text: 'Button按钮', link: '/components/button' }],
+      children: [
+        { text: 'Button按钮', link: '/components/button' },
+        { text: 'Cell单元格', link: '/components/cell' },
+      ],
     },
     // {
     //   isGroup: true,

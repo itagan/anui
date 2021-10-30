@@ -1,5 +1,6 @@
 import AnButton from './Button'
-const components = [AnButton]
+import AnCell from './Cell'
+const components = [AnButton, AnCell]
 
 const install = (app) => {
   if (install.installed) return
@@ -10,6 +11,6 @@ const install = (app) => {
 
 const AnUi = { install }
 
-export { install, AnButton }
+export { install, AnButton, AnCell }
 
 export default AnUi
