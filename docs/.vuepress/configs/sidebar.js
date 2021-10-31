@@ -12,6 +12,7 @@ function getComponentsSidebar() {
       children: [
         { text: 'Button按钮', link: '/components/button' },
         { text: 'Cell单元格', link: '/components/cell' },
+        { text: 'Popup弹出层', link: '/components/popup' },
       ],
     },
     {
