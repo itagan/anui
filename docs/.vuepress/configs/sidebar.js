@@ -14,11 +14,11 @@ function getComponentsSidebar() {
         { text: 'Cell单元格', link: '/components/cell' },
       ],
     },
-    // {
-    //   isGroup: true,
-    //   text: '组件',
-    //   children: [{ text: 'Button按钮', link: '/components/button' }],
-    // },
+    {
+      isGroup: true,
+      text: '业务组件',
+      children: [{ text: 'Card展示卡片', link: '/components/card' }],
+    },
   ]
 }
 

@@ -1,0 +1,12 @@
+.an-card {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgb(253, 253, 253);
+    &--bottom {
+      height: 44px;
+      line-height: 44px;
+      color: #1571d8;
+      background-color: rgb(241, 248, 253);
+    }
+  }
