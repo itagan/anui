@@ -1,0 +1,20 @@
+@import './common/var.scss';
+@import './common/animation.scss';
+
+.an-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.an-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  &--transparent {
+    background-color: transparent;
+  }
+}
