@@ -17,6 +17,11 @@ function getComponentsSidebar() {
     },
     {
       isGroup: true,
+      text: '反馈组件',
+      children: [{ text: 'Overlay 遮罩层', link: '/components/overlay' }],
+    },
+    {
+      isGroup: true,
       text: '业务组件',
       children: [{ text: 'Card展示卡片', link: '/components/card' }],
     },

@@ -1,0 +1,139 @@
+@import './var';
+
+@keyframes an-slide-up-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes an-slide-up-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes an-slide-down-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes an-slide-down-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes an-slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes an-slide-left-leave {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes an-slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes an-slide-right-leave {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes an-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes an-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes an-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.an-fade {
+  &-enter-active {
+    animation: $animation-duration-base an-fade-in both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: $animation-duration-base an-fade-out both
+      $animation-timing-function-leave;
+  }
+}
+
+.an-slide-up {
+  &-enter-active {
+    animation: an-slide-up-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: an-slide-up-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.an-slide-down {
+  &-enter-active {
+    animation: an-slide-down-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: an-slide-down-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.an-slide-left {
+  &-enter-active {
+    animation: an-slide-left-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: an-slide-left-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.an-slide-right {
+  &-enter-active {
+    animation: an-slide-right-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: an-slide-right-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}

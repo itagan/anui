@@ -15,3 +15,9 @@ $font-size-mini: 10px;
 $font-size-small: 12px;
 $font-size-normal: 14px;
 $font-size-large: 16px;
+
+// Animation
+$animation-duration-base: 0.3s;
+$animation-duration-fast: 0.2s;
+$animation-timing-function-enter: ease-out;
+$animation-timing-function-leave: ease-in;
